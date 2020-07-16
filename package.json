@@ -1,0 +1,17 @@
+{
+  "name": "marvinv-js-commission-task",
+  "version": "1.0.0",
+  "description": "marvinv-js-commission-task",
+  "main": "app.js",
+  "scripts": {
+    "start": "node -r esm app.js",
+    "test": "mocha -r esm"
+  },
+  "dependencies": {
+    "chai": "^4.2.0",
+    "esm": "^3.2.25",
+    "mocha": "^8.0.1",
+    "moment": "^2.27.0",
+    "node-fetch": "^2.6.0"
+  }
+}
