@@ -2,9 +2,11 @@
 
 How to install
 
-> Make sure to have nodeJS preferrably version v14.5.0 on your local machine. You may download it here: https://nodejs.org/en/download/current/
-> Download the project via git or as .zip file.
-> Once downloaded, open your terminal and go to project directory. You may type something like:
+1. Make sure to have nodeJS preferrably version v14.5.0 on your local machine. You may download it here: https://nodejs.org/en/download/current/
+
+2. Download the project via git or as .zip file.
+
+3.Once downloaded, open your terminal and go to project directory. You may type something like:
 
 `cd /Downloads/mvillegas-node-js-commission-task`
 
