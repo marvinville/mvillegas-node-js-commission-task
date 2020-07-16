@@ -1,4 +1,4 @@
-# node-js-commission-task
+# mvillegas-node-js-commission-task
 
 How to install
 
