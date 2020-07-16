@@ -6,7 +6,7 @@ How to install
 
 2. Download the project via git or as .zip file.
 
-3.Once downloaded, open your terminal and go to project directory. You may type something like:
+3. Once downloaded, open your terminal and go to project directory. You may type something like:
 
 `cd /Downloads/mvillegas-node-js-commission-task`
 
