@@ -10,18 +10,14 @@ How to install
 
 `cd /Downloads/mvillegas-node-js-commission-task`
 
-> Download the dependencies by typing:
+4. Once you get inside the project directory, download the dependencies by typing:
 
 `npm install`
 
 How to run the application
 
-> Inside the project folder directory, type:
-
 `npm start input.json`
 
 How to run test
-
-> Inside the project folder directory, type:
 
 `npm test`
