@@ -8,7 +8,7 @@ How to install
 
 `cd /Downloads/mvillegas-node-js-commission-task`
 
-> Once inside the folder, type:
+> Download the dependencies by typing:
 
 `npm install`
 
