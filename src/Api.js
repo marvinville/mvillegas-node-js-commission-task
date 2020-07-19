@@ -12,25 +12,43 @@ export default class Api {
       },
     }
   }
-  cashIn() {
-    return this.handleApi(this.url.cashIn).then((data) => data)
-  }
-  cashOutNatural() {
-    return this.handleApi(this.url.cashOut.natural).then((data) => data)
-  }
-  cashOutLegal() {
-    return this.handleApi(this.url.cashOut.legal).then((data) => data)
-  }
-  handleApi(url) {
-    if (url === '') return false
-    return fetch(url)
-      .then((response) => {
-        if (response.ok) {
-          return response.json()
+  async getApi(){
+
+        const cashIn = await fetch(this.url.cashIn)
+        const cashInData = await cashIn.json()
+
+        const cashOutNatural = await fetch(this.url.cashOut.natural)
+        const cashOutNaturalData = await cashOutNatural.json()
+
+        const cashOutLegal = await fetch(this.url.cashOut.legal)
+        const cashOutLegalData = await cashOutLegal.json()
+
+        return {
+          cashInData,
+          cashOutNaturalData,
+          cashOutLegalData
         }
-      })
-      .catch((error) => {
-        console.error('Error:', error)
-      })
+
+
   }
 }
+
+
+const cashIn = async() => {
+
+  const cashIn = await fetch('http://private-38e18c-uzduotis.apiary-mock.com/config/cash-in');
+  const response = cashIn.json()
+  return response
+
+
+}
+
+const getAll = async() => {
+
+  const a = cashIn()
+
+  return await Promise.all([a])
+
+}  
+
+getAll().then((log) => console.log(log))
