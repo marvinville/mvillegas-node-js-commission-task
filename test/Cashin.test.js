@@ -1,33 +1,23 @@
 const assert = require('chai').assert
 import CashIn from '../src/CashIn'
 
+const props = {
+  percents: 0.03,
+  max: {
+    amount: 5,
+    currency: 'EUR',
+  },
+}
+const cashIn = new CashIn(props)
+
 describe('CashIn methods', () => {
-  const cashIn = new CashIn()
+  it('Check computation', () => {
+    const amount = 200
+    const rate = props.percents / 100
 
-  let percents = 0.03
-  let rate = percents / 100
+    const commission = cashIn.getCommission({ amount })
 
-  let config = cashIn.setConfig({
-    percents: percents,
-    max: 5,
-  })
-
-  it('check configuration', () => {
-    config.then((data) => {
-      assert.isObject(data)
-      assert.isNumber(data.percents)
-      assert.isNumber(data.max)
-    })
-  })
-
-  it('check computation', () => {
-    let amount = 200
-
-    config.then(() => {
-      let commission = cashIn.getCommission({ amount })
-
-      assert.isNumber(commission)
-      assert.equal(commission, amount * rate)
-    })
+    assert.isNumber(commission)
+    assert.equal(commission, amount * rate)
   })
 })
