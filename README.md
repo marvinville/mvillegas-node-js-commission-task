@@ -9,6 +9,7 @@ How to install
   i. GIT: Open terminal and type:
 
   `git clone https://github.com/marvinville/mvillegas-node-js-commission-task.git`
+  `git pull origin master` //to get the updated version
 
 3. Once downloaded, go to project directory. On terminal, you may type something like:
 
